@@ -1,0 +1,14 @@
+service: shop-angular-cloudfront
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-south-1
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: aws-shop-angular-cloudfront-demo
+    distributionFolder: dist/app/browser
